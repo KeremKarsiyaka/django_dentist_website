@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} About Dr. Karşıyaka {% endblock %}
+{% block meta_description %} This is the website of Dr. Kerem Karşıyaka {% endblock %}
+{% block content %}
+
+
+<section id="contact" class="section">
+  <div class="container">
+      <div class="section-header">
+                <h2 class="wow fadeInDown animated">Contact Us</h2>
+                <p class="wow fadeInDown animated">Let's make you our customer for FOREVER 3:)</p>
+            </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 conForm">       
+        <div id="message"></div>
+        <form method="post" action="{% url 'home' %}" name="cform" id="cform">
+          {% csrf_token %}
+          <input name="name" id="name" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Your name..." >
+          <input name="email" id="email" type="email" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Email Address..." >
+          <textarea name="comments" id="comments" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Message..."></textarea>
+          <input type="submit" id="submit" name="send" class="submitBnt" value="Send">
+          <div id="simple-msg"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
