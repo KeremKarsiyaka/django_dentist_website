@@ -1,2 +1,3 @@
+A dentist company website builded with Django.
+
 # djdentist http://djdentist.herokuapp.com
-# This is the third website that created by django...
